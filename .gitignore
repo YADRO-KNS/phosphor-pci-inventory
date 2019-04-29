@@ -1,0 +1,28 @@
+# Compiler
+*.o
+
+# Libtool
+*.la
+*.lo
+/*-libtool
+
+# Autotools
+.deps
+.dirstamp
+.libs
+/Makefile
+/Makefile.in
+/aclocal.m4
+/ar-lib
+/autom4te.cache
+/compile
+/config.guess
+/config.log
+/config.status
+/config.sub
+/configure
+/depcomp
+/install-sh
+/libtool
+/ltmain.sh
+/missing

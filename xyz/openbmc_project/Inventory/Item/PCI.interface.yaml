@@ -1,0 +1,28 @@
+description: >
+    Implement to provide PCI device attributes.
+properties:
+    - name: Location
+      type: string
+      description: >
+          Location of the PCI device.
+          Typically it is a PCI location in format DOMAIN:BUS:DEVICE.FUNCTION.
+          Or it can be in the human readable format with a named slot on
+          the motherboard.
+    - name: DeviceID
+      type: string
+      description: >
+          Hexadecimal device identifier.
+    - name: VendorID
+      type: string
+      description: >
+          Hexadecimal vendor identifier.
+    - name: Revision
+      type: string
+      description: >
+          Hexadecimal device revision.
+    - name: ClassCode
+      type: string
+      description: >
+          Hexadecimal device class code.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
