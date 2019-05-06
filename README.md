@@ -64,12 +64,7 @@ The library must be placed into the directory of IPMI providers, usually
 `/usr/lib/ipmid-providers`.
 
 ### Prerequisites
-1. Interface for a PCI device inventory item must be registered in OpenBMC via
-   `phosphor-dbus-interfaces`. Example yaml file:
-   `./xyz/openbmc_project/Inventory/Item/PCI.interface.yaml`;
-   It is necessary to rebuild dbus-interfaces project to apply changes.
-2. White list of allowed IPMI messages must contain a rule to pass OEM command
-   with PCI device descriptions. This can be done by adding the following line
-   to `phosphor-host-ipmid/host-ipmid-whitelist.conf`:
-   `0x3A:0x2a    //<OEM IBM>:<Register PCI device>`
-   It is necessary to rebuild host-ipmid project to apply changes.
+Interface for a PCI device inventory item must be registered in OpenBMC via
+`phosphor-dbus-interfaces`. Example yaml file:
+`./xyz/openbmc_project/Inventory/Item/PCI.interface.yaml`;
+It is necessary to rebuild dbus-interfaces project to apply changes.
