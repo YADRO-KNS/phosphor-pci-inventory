@@ -50,13 +50,18 @@ struct IpmiPciDevice
     uint8_t revision;
 } __attribute__((packed));
 
-/** @struct IpmiPciPacket
- *  @brief IPMI OEM message packet.
+/** @struct IpmiPciMessage
+ *  @brief IPMI OEM message packet with PCI device description.
+ *
+ *  Each IPMI PCI message that skiboot sends begins with a 24-bits IANA number.
+ *  Unlike the skiboot message structure, the plug-in implementation on the
+ *  BMC-side doesn't contain this field, because the IPMI subsystem uses it
+ *  to search for an appropriate OEM handler, this part of the IPMI message
+ *  content is automatically truncated before the data is passed to the OEM
+ *  handler.
  */
-struct IpmiPciPacket
+struct IpmiPciMessage
 {
-    /** @brief IANA id for OEM message (24 bits). */
-    uint8_t iana[3];
     /** @brief Reset flag. */
     uint8_t reset;
     /** @brief PCI device description. */
