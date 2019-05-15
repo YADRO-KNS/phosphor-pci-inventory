@@ -37,10 +37,10 @@ WorkQueue workQueue_;
  *  @param[in] payload - message's payload data
  */
 static ipmi::RspType<> pciInventoryHandler(
-    const std::array<uint8_t, sizeof(IpmiPciPacket)>& payload)
+    const std::array<uint8_t, sizeof(IpmiPciMessage)>& payload)
 {
-    const IpmiPciPacket* pack =
-        reinterpret_cast<const IpmiPciPacket*>(payload.data());
+    const IpmiPciMessage* pack =
+        reinterpret_cast<const IpmiPciMessage*>(payload.data());
 
     if (pack->reset)
     {
